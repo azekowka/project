@@ -55,7 +55,8 @@ if ($selectedMood) {
                                value="<?php echo htmlspecialchars($mood['mood_name']); ?>"
                                <?php echo ($selectedMood === $mood['mood_name']) ? 'checked' : ''; ?>>
                         <label for="<?php echo htmlspecialchars($mood['mood_name']); ?>">
-                            <?php echo htmlspecialchars($mood['mood_name']); ?>
+                            <span class="mood-emoji"><?php echo htmlspecialchars($mood['emoji']); ?></span>
+                            <span class="mood-name"><?php echo htmlspecialchars($mood['mood_name']); ?></span>
                         </label>
                     </div>
                     <?php endforeach; ?>

@@ -104,15 +104,54 @@ main {
 
 .mood-options {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 1rem;
     margin: 1.5rem 0;
+    justify-items: center;
 }
 
 .mood-option {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.mood-option:hover {
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.mood-option input[type="radio"] {
+    display: none;
+}
+
+.mood-option label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.mood-emoji {
+    font-size: 2rem;
+    transition: transform 0.3s;
+}
+
+.mood-name {
+    font-size: 1rem;
+    color: #2c3e50;
+}
+
+.mood-option input[type="radio"]:checked + label .mood-emoji {
+    transform: scale(1.2);
+}
+
+.mood-option input[type="radio"]:checked + label .mood-name {
+    color: #3498db;
+    font-weight: 600;
 }
 
 /* Movie grid styles */

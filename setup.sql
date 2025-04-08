@@ -19,7 +19,8 @@ CREATE TABLE users (
 -- Create moods table
 CREATE TABLE moods (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    mood_name VARCHAR(50) NOT NULL UNIQUE
+    mood_name VARCHAR(50) NOT NULL UNIQUE,
+    emoji VARCHAR(10) NOT NULL
 );
 
 -- Create movies table with foreign keys
@@ -35,14 +36,14 @@ CREATE TABLE movies (
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
--- Insert default moods
-INSERT INTO moods (mood_name) VALUES 
-('Happy'),
-('Sad'),
-('Inspired'),
-('Excited'),
-('Relaxed'),
-('Romantic')
+-- Insert default moods with emojis
+INSERT INTO moods (mood_name, emoji) VALUES 
+('Excited', '🤩'),
+('Happy', '😊'),
+('Inspired', '✨'),
+('Relaxed', '😌'),
+('Romantic', '🥰'),
+('Sad', '😢')
 ON DUPLICATE KEY UPDATE mood_name=mood_name;
 
 -- Insert a test user (password: test123)
