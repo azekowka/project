@@ -86,10 +86,6 @@ if ($selectedMood) {
         <?php endif; ?>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Movie Mood Matcher. All rights reserved.</p>
-    </footer>
-
     <script src="script.js"></script>
 </body>
 </html> 

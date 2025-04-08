@@ -7,9 +7,12 @@ A web application that recommends movies based on user's mood. Built with PHP, M
 - User Authentication (Login/Signup)
 - Mood-based Movie Recommendations
 - Add/View Movies
-- Responsive UI/UX Design
+- Responsive UI/UX Design using Flexbox and Grid 
 - Session Management
 - Secure Password Handling
+- Uses PDO for database operations
+- Implements MVC-like pattern (Model-View-Controller) 
+- Clean code ensures good developer experience (DX)
 
 ## Project Structure
 
@@ -60,47 +63,6 @@ movie_mood_matcher/
    - image_url
    - user_id (Foreign Key to users)
    - created_at
-
-## Application Flow
-
-```mermaid
-graph TD
-    subgraph Database
-        DB[movie_mood_matcher DB]
-        Users[users table]
-        Moods[moods table]
-        Movies[movies table]
-        Users --> Movies
-        Moods --> Movies
-    end
-
-    subgraph Authentication Files
-        login[login.php]
-        signup[signup.php]
-        auth[auth.php]
-        logout[logout.php]
-    end
-
-    subgraph Core Files
-        index[index.php]
-        add_movie[add_movie.php]
-        db[db.php]
-    end
-
-    subgraph Assets
-        style[style.css]
-        script[script.js]
-        default_img[default.jpg]
-    end
-
-    User((User)) --> login
-    User --> signup
-    login --> auth
-    signup --> auth
-    auth --> index
-    auth --> add_movie
-    logout --> auth
-```
 
 ## Flow of Operation
 
@@ -162,11 +124,3 @@ git clone [repository-url]
 - Web server (Apache/Nginx)
 - Modern web browser
 - XAMPP
-
-## Acknowledgments
-
-- Built with PHP, MySQL, JavaScript, HTML, and CSS
-- Uses PDO for database operations
-- Implements MVC-like pattern
-- Responsive UI/UX design using Flexbox and Grid 
-- Clean code ensures good developer experience (DX)

@@ -82,8 +82,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Movie Mood Matcher. All rights reserved.</p>
-    </footer>
 </body>
 </html> 
