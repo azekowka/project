@@ -112,10 +112,14 @@ git clone [repository-url]
      $username = 'root';
      $password = '';
      ```
+4. Open localhost:
+   - http://localhost/project/login.php
 
-4. Test user credentials:
-   - Username: test_user
-   - Password: test123
+5. Troubleshootiing:
+   - netstat -ano | findstr :3306
+   - tasklist | findstr 6656
+   - taskkill /PID 6656 /F
+
 
 ## Requirements
 
